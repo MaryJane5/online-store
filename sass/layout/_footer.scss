@@ -1,0 +1,107 @@
+#footer {
+    background-color: $dark-blue;
+}
+
+.footer-top {
+    padding: 110px 0 95px;
+    border-bottom: 1px solid #2f3b41;
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0 -40px;
+    }
+
+    .col {
+        width: 25%;
+        padding: 0 40px;
+    }
+
+    h3 {
+        color: $white;
+        font-size: 22px;
+        font-weight: 400;
+        position: relative;
+        padding: 0 0 25px;
+        margin: 0 0 30px;
+
+        &:after {
+            position: absolute;
+            content: ' ';
+            bottom: 0;
+            left: 0;
+            background-color: $green;
+            width: 55px;
+            height: 4px;
+        }
+    }
+
+    .contact-list {
+        margin: 30px 0 0;
+    }
+
+}
+
+
+
+.contact-list {
+    @extend %listreset;
+
+    li {
+        position: relative;
+        padding: 0 0 0 30px;
+        font-size: 14px;
+        color: $white;
+        margin: 0 0 20px;
+
+        &:last-child {
+            margin: 0;
+        }
+
+        i {
+            position: absolute;
+            top: 5px;
+            left: 0;
+            color: $green;
+            font-size: 16px;
+        }
+
+        a {
+            color: $white; 
+        }
+
+        address {
+            font-style: normal;
+        }
+    }
+}
+
+.list-footer-link {
+    @extend %listreset;
+
+    li {
+        position: relative;
+        padding: 0 0 0 22px;
+
+        &:before {
+            content: "\e904";
+            font-family: 'icomoon';
+            position: absolute;
+            top: 5px;
+            left: 0;
+            color: $green;
+            transform: rotate(180deg);
+            font-size: 10px;
+        }
+
+        a {
+            color: #b7c3c7;
+
+            &:hover {
+                color: darken(#b7c3c7, 20%) 
+            }
+        }
+    }
+}
+
