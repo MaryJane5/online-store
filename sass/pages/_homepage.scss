@@ -1,0 +1,48 @@
+#wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1190px;
+    padding: 0 10px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.btn {
+    @extend %transition;
+    color: $btn-color;
+    background-color: $btn-background;
+    padding: $btn-padding;
+    font-size: $btn-font-size;
+    outline: none;
+    border: none;
+
+    &.btn-register {
+        background-color: $red;  
+        border-radius: 3px;
+        width: 73px;
+        font-size: 12px;
+
+        &:hover {
+            background-color: lighten($red, 20%);
+        }
+    }
+
+    &.btn-login {
+        background-color: $blue;
+        border-radius: 3px;
+        width: 73px;
+        font-size: 12px;
+        margin: 0 16px 0 0;
+
+        &:hover {
+            background-color: lighten($blue, 20%);
+        }
+
+    }
+}
+
+
+
