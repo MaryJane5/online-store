@@ -1,0 +1,35 @@
+.product-details-content {
+
+    background-color: $light-gray;
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @include media ('<=widescreen') {
+            display: block;
+        }
+
+        .content {
+            width: 74.36%;
+            padding: 2%;
+            background-color: white;
+            border: 1px solid #dcdcdc;
+
+            .product-img {
+                padding: 25%;
+                background-size: cover;
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+            }
+        }
+
+        .side-bar {
+            width: 23.08%;
+            margin-left: 10px;
+        }
+    }
+
+    
+}
