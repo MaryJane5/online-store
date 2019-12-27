@@ -13,15 +13,31 @@
 
         .content {
             width: 74.36%;
-            padding: 2%;
-            background-color: white;
-            border: 1px solid #dcdcdc;
+            
+            .product-img-outer {
+                padding: 2%;
+                background-color: white;
+                border: 1px solid #dcdcdc;
+                margin-bottom: 32px;
+            }
 
             .product-img {
                 padding: 25%;
                 background-size: cover;
                 background-position: 50% 50%;
                 background-repeat: no-repeat;
+            }
+
+            h2 {
+                font-size: 30px;
+                line-height: 1.33;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 1.5;
+                color: #707070                ;
+                margin-bottom: 40px;
             }
         }
 
