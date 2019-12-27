@@ -19,11 +19,7 @@ textarea {
 	box-sizing: border-box;
 	border: 1px solid $form-element-border-color;
 	padding: $form-element-padding;
-
-	// &:hover {
-
-	// }
-
+	e
 	&:focus {
 		border-color: $form-element-focus-border-color;
 	}
@@ -34,21 +30,3 @@ textarea {
 	}
 }
 
-select {
-	-webkit-border-radius: 0;
-}
-
-textarea {
-	resize: vertical;
-	vertical-align: top;
-}
-
-button,
-input[type='button'],
-input[type='reset'],
-input[type='file'],
-input[type='submit'] {
-	-webkit-appearance: none;
-	-webkit-border-radius: 0;
-	cursor: pointer;
-}
