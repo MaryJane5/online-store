@@ -9,3 +9,5 @@ function initMobileNav() {
         menuOpener: '.nav-opener'
     });
 }
+
+$("#product-tabs").tabs();

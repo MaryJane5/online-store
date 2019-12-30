@@ -78,13 +78,77 @@
                 }
             }
 
-            
+            #product-tabs {
+                background-color: $white;
+                border: 1px solid #dfdfdf;
+
+                ul {                    
+                    @extend %listreset;
+                }
+
+                .product-tabs-headings {
+
+                    display: flex;
+                    
+                    li {
+                        width: 25%;
+                        text-align: center;
+                        border-bottom: 1px solid #dfdfdf;
+                        border-right: 1px solid #dfdfdf;
+                        font-size: 16px;
+
+                        &:last-child {
+                            border-right: none;
+                        }
+
+                        a {
+                            display: block;
+                            color: #70838d;
+                            outline: none;
+                            padding: 18px 10px;
+                        }
+                    }
+
+                    .ui-tabs-active {
+                        font-weight: 500;
+                        border-bottom: 5px solid $green;
+                    }
+
+                    .ui-state-focus {
+                        outline: none;
+                    }
+                }
+
+                .product-tabs-description {
+                    font-size: 16px;
+                    line-height: 2.25;
+                    color: #707070;
+                    padding: 25px 35px;
+
+                    li {
+                        position: relative;
+                        padding-left: 20px;
+
+                        &:before {
+                            content: "\e904";
+                            font-family: 'icomoon';
+                            position: absolute;
+                            top: 5px;
+                            left: 0;
+                            color: #8bc34a;
+                            transform: rotate(180deg);
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }            
         }
 
         .side-bar {
             width: 23.08%;
             margin-left: 10px;
         }
+
     }
 
     
