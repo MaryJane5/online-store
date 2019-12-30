@@ -1,0 +1,44 @@
+#main {
+  background-color: #f4f6f5;
+}
+
+.profile-details-content {
+  margin: 0 0 115px;
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .side-bar {
+    width: calc(25% - 25px);
+    margin: 0 25px 0 0;
+    background-color: #fff;
+    border: 1px solid #dedede;
+    height: 100px;
+  }
+
+  .main-content {
+    width: 75%;
+
+    .banner {
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #dedede;
+      margin: 0 0 30px;
+
+      a {
+        display: block;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+
+  }
+}
+
