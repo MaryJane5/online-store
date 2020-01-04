@@ -50,6 +50,7 @@
             #product-tabs {
                 background-color: $white;
                 border: 1px solid #dfdfdf;
+                margin-bottom: 52px;
 
                 ul {                    
                     @extend %listreset;
@@ -144,9 +145,190 @@
         .side-bar {
             width: calc(25% - 20px);
             margin-left: 10px;
+
+            &:last-child {
+                margin-bottom: 0;;
+            }
+
+            h3 {
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 1;
+                color: $dark-blue;
+                border-bottom: 1px solid #dfdfdf;
+                padding-bottom: 22px;
+                margin-bottom: 32px;
+            }
+
+            .product-price {
+            
+                .price {
+                    font-weight: 500;                
+                    font-size: 22px;
+                    line-height: 1;
+                    color: $red;
+                    margin-bottom: 34px;
+                }
+
+                button {
+                    display: block;
+                    max-width: 208px;
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    margin: 0 auto 8px;
+                    font-weight: bold;
+                    font-size: 16px;
+                    color: $white;
+                    line-height: 1;
+                    padding: 16px 10px;
+                    box-shadow: 0px 1px 2px 0px rgba(69, 90, 100, 0.75);
+                }
+            }
+
+            .icons-list {
+                @extend %listreset;
+
+                display: flex;
+                justify-content: space-between;
+                
+                li {
+                    padding-right: 5px;
+
+                    &:last-child {
+                        padding-right: 0;
+                    }
+
+                }
+            }
         }
 
     }
 
-    
+    .product-author__outer {
+        display: flex;
+        margin-bottom: 24px;
+    }
+
+    .product-author__img {
+        width: 73px;
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        margin-right: 14px;
+    }
+
+    .product-author__info {
+        .name {
+            font-size: 18px;
+            line-height: 1;
+            color: $dark-blue;
+            font-weight: 500;
+            padding-bottom: 20px;
+        }
+
+        .view-profile {
+            padding: 2px 10px;
+            background-color: #fff;
+            border: 1px solid #dfdfdf;
+            outline: none;
+            color: #707070;
+            font-size: 13px;
+            font-weight: 400;
+        }
+    }
+
+    .side-bar__item {
+        background-color: #fff;
+        border: 1px solid #dfdfdf;
+        padding: 26px 30px 20px 28px;                
+        margin-bottom: 34px;
+    }
+
+    .icon-shopping-cart {
+        margin-right: 9px;
+    }
+
+    .cart {
+        background-color: $green;
+
+        &:hover {
+            background-color: lighten($green, 10%);
+        }
+    }
+
+    .favourites {
+        span {
+            margin-right: 8px;
+        }
+
+        background-color: #42a5f5;
+
+        &:hover {
+            background-color: lighten(#42a5f5, 10%);
+        }
+    }
+
+    .buy-now {
+        background-color: $blue;
+
+        &:hover {
+            background-color: lighten($blue, 10%);
+        }
+    }
+
+    .more-product {
+        .row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .col {
+            display: flex;
+            margin: 0 0 28px 0;
+        }
+    }
+
+    .more-product__title {
+        font-size: 18px;
+        line-height: 24px;
+        color: $dark-blue;
+        font-weight: 500;
+        background-color: #fff;
+        border: 1px solid #dfdfdf;
+        padding: 18px 10px 18px 26px;
+        margin-bottom: 28px;
+    }
+
+    .more-product__item__img {
+        width: 100px;
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+    }
+
+    .more-product__item__description {
+        padding: 14px 22px 6px;
+        background-color: #fff;
+        box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
+
+        .title {
+            font-weight: 500;
+            font-size: 14px;
+            color: $dark-blue;
+        }
+
+        .category {
+            font-weight: 400;
+            font-size: 12px;
+            color: $green;
+        }
+
+        .price {
+            font-weight: 700;
+            font-size: 18px;
+            color: $dark-blue;            
+        }
+    }
 }
