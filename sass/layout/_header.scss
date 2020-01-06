@@ -6,7 +6,7 @@
         justify-content: space-between;
         align-items: center;
 
-        @include media ('<=phone') {
+        @include media ('<=tablet') {
             flex-direction: column;
         }
     }
@@ -17,7 +17,7 @@
     display: flex;
     align-items: center;
 
-    @include media ('<=phone') {
+    @include media ('<=tablet') {
         flex-direction: column;
     }
 }
@@ -28,7 +28,7 @@
     width: 100%;
     margin: 0 10px 0 0;
 
-    @include media ('<=phone') {
+    @include media ('<=tablet') {
         margin: 0 0 20px;
     }
 }
@@ -69,10 +69,9 @@
         margin: 0 10px 0 0;
     }
 
-    @include media ('<=phone') {
+    @include media ('<=tablet') {
         margin: 0 0 15px;
     }
-
 
     li {
         margin: 0 16px 0 0;

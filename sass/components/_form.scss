@@ -1,20 +1,24 @@
 input[type="text"],
 input[type="email"],
 input[type="password"],
-textarea {
-    // your custom style
+textarea,
+.fake-input {
     display: block;
-    border: 1px solid gray;
-    margin: 0 0 20px;
+    border: 1px solid #f1f1f1;
+    height: 40px;
+    padding: 7px 15px;
+    width: 100%;
+    background-color: #f9f9f9;
+    color: #000;
 
     &:focus {
-        border-color: yellow;
+        border-color: green;
         outline: none;
 
     }
 
     &:active {
-        border-color: red;
+        border-color: green;
         outline: none;
     }
 
@@ -29,129 +33,31 @@ textarea {
     }
 }
 
-input[type="submit"] {
-    // your custom style
-}
-
-// custom input[type="file"]
-label {
-   cursor: pointer;
-   /* Style as you please, it will become the visible UI component. */
-}
-
-#upload-photo {
-   opacity: 0;
-   position: absolute;
-   z-index: -1;
-}
-
-// textarea
-textarea {
-    // your custom style
-}
-
-// label
-label {
+label, .fake-label {
     display: block;
-    margin: 0 0 10px;
+    font-size: 15px;
+    color: #444;
 }
 
-// custom checkbox and radio
-.custom-form [type="checkbox"],
-.custom-form [type="radio"] {
-    position: fixed;
-    left: 0;
-    top: 0;
-    opacity: 0;
-    z-index: -1;
-}
+input[type="submit"] {
+    display: block;
+    background-color: $green;
+    font-size: 15px;
+    color: $white;
+    border: 0;
+    outline: none;
+    padding: 12px 10px;
+    max-width: 125px;
+    width: 100%;
+    transition: all 0.3s;
 
-// radio button male and femail are just exc. classes 
-// in html vale anf for must containe the same name 
-.male {
-    .fake-input {
-        position: relative;
-        display: block;
-        cursor: pointer;
-        background-color: red;
-        width: 150px;
-        height: 150px;
-    }
-
-    input[type="radio"]+.fake-input:before {
-        // your custom style
-    }
-
-    .fake-label {
-        // your custom style text
-    }
-}
-
-.female {
-    .fake-input {
-        position: relative;
-        display: block;
-        cursor: pointer;
-        background-color: red;
-        width: 150px;
-        height: 150px;
-    }
-
-    input[type="radio"]+.fake-input:before {
-        // your custom style
-    }
-
-    .fake-label {
-        // your custom style text
+    &:hover {
+        background-color: lighten($green, 10%);
     }
 }
 
 
-.custom-form [type="radio"]:checked+.fake-input {
-    // your custom style
-}
-
-.custom-form input:disabled+.fake-input,
-.custom-form input:disabled~.fake-label {
-    opacity: .5;
-}
-
-// check-box
-.custom-checkbox {
-    .fake-input {
-        display: block;
-        width: 24px;
-        height: 24px;
-        border: 1px solid #c7cad1;
-        background: red;
-        position: relative;
-
-        &:before {
-            position: absolute;
-            content: " chek ";
-            color: #000;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-    }
-
-    .fake-label {
-        // your custom style text
-    }
-}
-
-.custom-form [type="checkbox"]+.fake-input:before {
-    opacity: 0;
-
-}
-
-.custom-form [type="checkbox"]:checked+.fake-input:before,
-.custom-form [type="checkbox"]:checked+.fake-input {
-    opacity: 1;
-}
-
-// custom-select
+// custom-select-start
 .select-hidden {
     display: none;
     visibility: hidden;
@@ -159,13 +65,13 @@ label {
 }
 
 
-.select {
+.select{
     position: relative;
     cursor: pointer;
     display: inline-block;
-    height: 50px;
+    height: 40px;
+    max-width: 100%;
     width: 100%;
-    max-width: 200px;
 }
 
 .select-styled {
@@ -174,15 +80,28 @@ label {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: $white;
-    border: 1px solid #c7cad1;
+    border: 1px solid #f1f1f1;
+    background-color: #f9f9f9;
+    color: #000;
     transition: all 0.2s ease-in;
+    padding: 8px 30px 8px 17px;
+    color: #707070;
 
     &:after {
-        content: "your icon";
+        content: "\e904";
+        font-family: 'icomoon';
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 10px;
+        right: 15px;
+        transform: rotate(-90deg);
+        transition: all 0.2s;
+    }
+
+
+    &.active {
+        &:after {
+            transform: rotate(90deg);
+        }
     }
 }
 
@@ -205,7 +124,7 @@ label {
         transition: all 0.15s ease-in;
 
         &:hover {
-            color: $black;
+            color: #000;
             background-color: #f3f3f3;
         }
 
@@ -214,3 +133,25 @@ label {
         }
     }
 }
+
+// custom-select-end
+
+// custom input[type="file"]-start
+.upload-file {
+    color: #444;
+    border: 1px solid #f1f1f1;
+    max-width: 98px;
+    text-align: center;
+    margin: 0 14px 0 0 !important;
+    height: 26px;
+    width: 100% !important; 
+}
+
+#upload-file-main,  #upload-file-screenshots{
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+// custom input[type="file"]-end
+
