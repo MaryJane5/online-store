@@ -2,6 +2,7 @@
 @import 'vendors/breakpoints_media-expressions';
 @import 'vendors/normalize';
 @import 'vendors/icomoon';
+@import 'vendors/magnific-popup';
 
 @import 'base/variables';
 @import 'base/mixins';
@@ -14,8 +15,11 @@
 @import 'layout/footer';
 
 @import 'pages/homepage';
-
+@import 'pages/upload-products';
 @import 'pages/product-details';
+
+@import 'components/bread-crumds';
+@import 'components/form';
 
 
 
