@@ -25,6 +25,10 @@
             border: 1px solid #dcdcdc;
             margin-bottom: 32px;
 
+            @include media ('<=tablet') {
+                margin: 0 0 20px;
+             }
+
             @include media ('<=phone') {
                margin: 0 0 15px;
              }
@@ -40,6 +44,17 @@
         h2 {
             font-size: 30px;
             line-height: 1.33;
+            text-align: left;
+
+            @include media ('<=tablet') {
+                font-size: 20px;
+                margin: 0 0 10px;
+             }
+        
+             @include media ('<=phone') {
+                font-size: 16px;
+                margin: 0 0 8px;
+             }
         }
 
         p {
@@ -47,34 +62,47 @@
             line-height: 1.5;
             color: #707070;
             margin-bottom: 40px;
-        }
-        
-        .row {
-            display: flex;
-            margin-bottom: 42px;                
-        }
 
-        .social-link-list {
-            @extend %listreset;
-            
-            display: flex;
+            @include media ('<=tablet') {
+                font-size: 14px;
+                margin-bottom: 24px;
+             }
+        
+             @include media ('<=phone') {
+                font-size: 12px;
+             }
         }
-         
     }
 
+    .buttons-and-links-outer {
+        display: flex;
+        margin-bottom: 42px; 
+        justify-content: space-between;               
+    }    
+    
     .buttons-outer {
-        width: 74%;
+        width: 58.62%;
+        display: flex;
+        flex-wrap: nowrap;
 
         button {
             color: $light-gray;
             font-size: 16px;
-            max-width: 158px;
-            width: 100%;
+            width: calc(33.33% - 6px);
             padding: 12px;
             margin-right: 18px;
             margin-bottom: 10px;
             outline: none;
-            border: none;                        
+            border: none;  
+            
+            &:last-child {
+                margin-right: 0;
+            }
+
+            @include media ('<=tablet') {
+                font-size: 14px;
+                padding: 10px;
+             }
         }  
         
         .red {
@@ -104,6 +132,23 @@
             }
         }
     }
+
+    .social-link-list {
+        @extend %listreset;
+
+        justify-content: flex-end;
+        width: calc(18% - 10px);
+        margin: 0 0 0 10px;
+        
+        .icon-pinterest-square {
+            color: $red;
+        }
+
+        li {
+            width: calc(25% - 6px) ;
+        }
+    }
+
 
     #product-tabs {
         background-color: $white;
@@ -479,5 +524,5 @@
             padding-right: 0;
         }
 
-    }
+    }    
 }
