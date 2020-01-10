@@ -203,6 +203,10 @@
     background-color: $btn-background;
     outline: 0;
     
+    @include media ('<=tablet') {
+      font-size: 14px;
+    }
+
     @include media ('<=phone') {
       margin: 0 auto 15px;
      }
@@ -216,6 +220,10 @@
       @include media ('<=desktop') {
        margin: 0 15px 0 0;
        }
+
+      @include media ('<=tablet') {
+        padding: 20px 60px;
+      }
 
       @include media ('<=phone') {
         margin: 0 auto 15px;
@@ -231,11 +239,20 @@
         line-height: 18px;
         width: 18px;
         height: 14px;
+
+        @include media ('<=tablet') {
+          font-size: 14px;
+          top: 21px;
+        }
       }
     }
 
     &.btn-following {
       padding: 20px 100px;
+
+      @include media ('<=tablet') {
+        padding: 20px 60px;
+      }
     }
   }
 }
@@ -334,11 +351,16 @@
     margin: 0 auto;
     text-align: center;
 
-    @include media ('<=phone') {
-      width: 100%;
-      border-bottom: 1px solid #dedede;
-      padding: 10px 0;
-     }
+      @include media ('<=tablet') {
+        height: 95px;
+      }
+
+       @include media ('<=phone') {
+        width: 100%;
+        border-bottom: 1px solid #dedede;
+        padding: 10px 0;
+        height: auto;
+      }
 
     &:last-child {
       border-right: none;
