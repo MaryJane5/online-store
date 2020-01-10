@@ -23,7 +23,7 @@ h2 {
     text-align: center;
 
     @include media ('<=tablet') {
-        font-size: 22px;
+        font-size: 28px;
         margin: 0 0 20px
      }
 
@@ -86,10 +86,12 @@ h2 {
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
-
+    margin: 0 0 45px;
+    
     @include media ('<=tablet') {
         padding: 80px 0;
      }
+
 
     h1 {
         color: $white;
@@ -429,16 +431,281 @@ h2 {
     }
 }
 
-.product-box {
-    .title {
-        
+
+.release-product-tabs__btn {
+    @extend %listreset;
+
+    display: flex;
+    justify-content: center;
+
+    li {
+        margin: 0 6px 0 0;
+
+        &:last-child {
+            margin: 0;
+        }
+
+        &.ui-state-active {
+            a {
+                background-color:red;
+                color: $white;
+            }
+        }
+    }
+
+    a {
+        display: inline-block;
+        vertical-align: middle;
     }
 }
 
-  
+// why-you-choose 
 
+.why-you-choose {
+    background-color: $dark-blue;
 
-  
+    h2 {
+        color: $white;
+        text-align: center;
+        margin: 0 0 85px;
+
+        @include media ('<=desktop') {
+            margin: 0 0 60px;
+        }
+
+        @include media ('<=tablet') {
+            margin: 0 0 40px;
+        }
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -40px;
+
+            @include media ('<=widescreen') {
+                margin: 0 -10px;
+            }
+
+            @include media ('<=tablet') {
+                margin: 0;
+                flex-direction: column;
+            }
+
+        }
+
+    .col {
+        width: 33.31%;
+        padding: 0 40px;
+        text-align: center;
+        @extend %transition;
+
+        @include media ('<=tablet') {
+            max-width: 300px;
+            width: 100%;
+            margin: 0 auto 25px;
+        }
+        
+
+        &:hover {
+            span {
+                color: #8bc34a;
+            }
+        }
+
+        @include media ('<=widescreen') {
+            padding: 0 20px;
+        }
+
+        @include media ('<=tablet') {
+            padding: 0 15px;
+        }
+
+        @include media ('<=phone') {
+            padding: 0 10px;
+        }
+    }
+
+    p {
+        color: #b0bec5;
+    }
+
+    .choose-item-title {
+        font-size: 24px;
+        color: $white;
+        margin: 0 0 20px;
+        line-height: 1.2;
+        @extend %transition;
+
+        @include media ('<=desktop') {
+            margin: 0 0 10px;
+        }
+
+        @include media ('<=tablet') {
+            font-size: 20px;
+        }
+    
+        &:hover {
+            color: #8bc34a;
+            }
+        }
+        
+        .choose-item-img {
+         margin: 0 0 30px;
+
+         @include media ('<=tablet') {
+            margin: 0 0 15px;
+        }
+
+        img {
+            border-radius: 50%;
+            width: 100px;
+
+            @include media ('<=tablet') {
+                width: 80px;
+                }
+            }
+ 
+        }
+    }
+    
+// become
+    .become {
+    background-color: #f4f6f5;
+    
+    .container {
+        position: relative;
+        max-width: 1100px;
+        height: 435px;
+        background-color: #b5b5b5;
+        padding: 0;
+        }
+
+    .container-inside {
+        display: flex;
+        align-items: center;
+       justify-content: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 215px;
+        background-color: $green;
+        max-width: 650px;
+        width: 100%;
+        margin: 0 10px;
+
+        @include media ('<=tablet') {
+            max-width: 400px;
+            margin: 0;
+        }
+
+            @include media ('<=phone') {
+                max-width: 300px;
+            }
+
+        .btn {
+            background-color: $white;
+            color: $dark-blue;
+            font-size: 18px;
+            max-width: 200px;
+            width: 100%;
+            padding: 10px 10px;
+            }
+
+        }
+    }
+    
+    .over-become {
+    display: flex;
+    align-items: center;
+    padding: 70px 60px;
+
+        @include media ('<=tablet') {
+            padding: 20px;
+            flex-direction: column;
+            text-align: center;
+        }
+
+    }
+    
+    .discription-become {
+    font-size: 30px;
+    padding: 0 60px 0 0;
+    line-height: 1.2;
+    color: #fff;
+    font-size: 30px;
+
+        @include media ('<=tablet') {
+           padding: 0 0 20px;
+           font-size: 25px;
+        }
+
+    }
+// free-monthly
+    .free-monthly {
+       background-color: $white;
+
+        h2 {
+            text-align: center;
+            margin: 0 0 55px;
+
+            @include media ('<=tablet') {
+                margin: 0 0 30px;
+             }
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col {
+            width: 33.31%;
+            padding: 0 15px;
+            text-align: center;
+
+                @include media ('<=tablet') {
+                   width: 100%;
+                }
+
+            }
+
+    }
+
+.tutorial {
+    @include media ('<=tablet') {
+        max-width: 400px;
+        margin: 0 auto 30px;
+        }
+
+        @include media ('<=tablet') {
+        max-width: 300px;
+        }
+}
+
+.tutorial-img {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    height: 270px;
+
+    @include media ('<=tablet') {
+            height: 200px;
+        }
+}
+
+.tutorial-desciption {
+    background-color: #f8f8f8;
+    padding: 36px 15px;
+    color: $dark-blue;
+    font-size: 20px;
+
+    @include media ('<=tablet') {
+        padding: 20px 15px;
+    }
+}
 
 
 

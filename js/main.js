@@ -10,8 +10,11 @@ function initMobileNav() {
     });
 }
 
+  $( function() {
+    $("#product-tabs").tabs();
 
-$("#product-tabs").tabs();
+    $( "#release-product-tabs" ).tabs();
+  });
 
 // custom select
 $('.custom-select').each(function() {
